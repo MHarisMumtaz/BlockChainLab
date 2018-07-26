@@ -9,6 +9,7 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="util.js"></script>
   <style type="text/css">
   	.card{
   		width: 32rem;
@@ -53,14 +54,17 @@
   	}
   </style>
 </head>
-<body style="margin-top: 55px;">
+<body style="margin-top: 55px;" onload="loadIndex()">
 	<div class="container">
 		<div class="row">
 			<div class="well">
 				<div class="row">
 					<div class="col-md-12">
-						<input type="button" class="btn btn-lg btn-success pull-right" 
+						<p id="logedUser" class="pull-right"></p>
+						<input id="loginRow" type="button" class="btn btn-lg btn-success pull-right" 
 						name="login" value="Login">
+						<input id="logout" type="button" class="btn btn-success hide" 
+						name="logout" value="Logout" onclick="logout()">
 					</div>
 				</div>
 			</div>
@@ -77,7 +81,7 @@
 						<div class="card-body">
 						<h4 class="card-title">Jazz Bass - 1200 U$S or 5000 Points</h4>
 						<p class="card-text">Accumulate 1000 Points	</p>
-						<a href="#" class="btn btn-primary btn-lg buy-btn">BUY</a>
+						<a href="checkout-jazz.html" class="btn btn-primary btn-lg buy-btn">BUY</a>
 						</div>
 					</div>
 				</div>
@@ -90,7 +94,7 @@
 						<div class="card-body">
 						<h4 class="card-title">Gibson Les Paul - 2500 U$S or 12500 Points</h4>
 						<p class="card-text">Accumulate 2100 Points</p>
-						<a href="#" class="btn btn-primary btn-lg buy-btn">BUY</a>
+						<a href="checkout-gibson.html" class="btn btn-primary btn-lg buy-btn">BUY</a>
 						</div>
 					</div>
 				</div>
@@ -103,7 +107,7 @@
 						<div class="card-body">
 						<h4 class="card-title">Tuner - 150 U$S or 700 Points</h4>
 						<p class="card-text">Accumulate 100 Points</p>
-						<a href="#" class="btn btn-primary btn-lg buy-btn">BUY</a>
+						<a href="checkout-tuner.html" class="btn btn-primary btn-lg buy-btn">BUY</a>
 						</div>
 					</div>
 				</div>
